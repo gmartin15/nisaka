@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "node index.js",
     "start": "node index.js"
   },
   "repository": "https://github.com/gmartin15/nisaka.git",
@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "^4.18.2",
     "http-proxy-middleware": "^2.0.6",
+    "node-fetch": "^3.3.1",
     "pug": "^3.0.2",
     "request": "^2.88.2"
   },
