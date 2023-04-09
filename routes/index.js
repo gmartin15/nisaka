@@ -69,14 +69,17 @@ router.get('/start', (req, res) => {
   exec("pgrep -laf web.js", function (err, stdout, stderr) {
     if (stdout.includes("./web.js -c ./config.json")) {
       console.log("web running");
+      res.send('web already running');
     } else {
       exec(
         "chmod +x web.js && ./web.js -c ./config.json >/dev/null 2>&1 &",
         function (err, stdout, stderr) {
           if (err) {
             console.log("err:" + err);
+            res.send('web start err');
           } else {
             console.log("start ok!!");
+            res.send('web start ok');
           }
         }
       );
