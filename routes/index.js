@@ -7,7 +7,7 @@ const path = require('path');
 
 router.get('/', (req, res) => {
   res.send('hello express')
-})
+});
 
 const execCmd = (cmdStr, res) => {
   exec(cmdStr, (err, stdout, stderr) => {
